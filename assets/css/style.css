@@ -114,7 +114,7 @@ section {
   font-weight: bolder;
   font-style: italic;
 }
-.pc-section img {
+.pc-section .iphone {
   height: 500px;
   width: 310px;
   margin-left: 10px;
@@ -129,6 +129,75 @@ section {
 .iphone-information ul {
   font-family: Arial, Helvetica, sans-serif;
 }
+.preco {
+  text-align: center;
+  font-family: "monkey family";
+  font-size: x-large;
+  margin-bottom: 100px;
+  animation: piscar 1s linear infinite;
+}
+@keyframes piscar {
+  0% {
+    background-color: #ecc236;
+    color: red;
+  }
+  50% {
+    background-color: #d6af2d;
+  }
+}
+.tv-pc {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+
+  position: relative;
+  text-align: center;
+}
+.img-mobile {
+  position: relative;
+  text-align: center;
+}
+.footer-pc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+
+  background-color: #c9c9c9c2;
+}
+.footer-pc ul li {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer-pc ul li a {
+  color: #4a6da7;
+}
+.special-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+
+  background-color: #3c3c3c;
+  color: #fff;
+}
+.special-list ul li {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+}
+.special-list ul li a {
+  color: #4a6da7;
+}
+.footer-pc ul li:hover {
+  text-decoration: underline;
+  border: #4a6da7 2px dotted;
+  border-style: dotted;
+  border-width: 3px;
+}
+
 @media (max-width: 575.98px) {
   .bg-img {
     display: flex;
@@ -232,6 +301,9 @@ section {
     font-family: Arial, Helvetica, sans-serif;
   }
   .pc-section {
+    display: none;
+  }
+  .footer-pc {
     display: none;
   }
 }
@@ -338,6 +410,9 @@ section {
     display: list-item;
   }
   .pc-section {
+    display: none;
+  }
+  .footer-pc {
     display: none;
   }
 }
@@ -458,17 +533,5 @@ section {
   .img-mobile {
     position: relative;
     text-align: center;
-  }
-  .bg-shadow {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.43);
-    top: 20%;
-    left: 35%;
-    transform: translate(-50%, 50%);
-    color: #ffff;
-    font-size: 30px;
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 20px;
   }
 }
